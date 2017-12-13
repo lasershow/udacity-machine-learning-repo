@@ -217,7 +217,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -319,7 +319,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Search income type</span>
@@ -334,7 +334,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[29]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -351,7 +351,7 @@ Name: income, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -444,7 +444,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -796,7 +796,7 @@ JElq5B1HwLsUJmoX4AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -1149,7 +1149,7 @@ QpIkSVIrhghJkiRJrRgiJEmSJLXyA/6QgodBkRSGAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -1346,7 +1346,7 @@ QpIkSVIrhghJkiRJrRgiJEmSJLXyA/6QgodBkRSGAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -1462,7 +1462,7 @@ Name: income, dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -1549,7 +1549,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>
@@ -1566,13 +1566,13 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <span class="c1"># precision = TP / (TP+FP)</span>
 
 <span class="c1"># generate accuracy using the stats calculated earlier</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="n">greater_percent</span> <span class="o">/</span> <span class="mf">100.</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">TP</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span><span class="o">+</span><span class="n">FP</span><span class="p">)</span>
 <span class="n">recall</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">*</span> <span class="mf">100.</span> <span class="o">/</span> <span class="p">(</span><span class="n">FP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
+<span class="n">precision</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">TP</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">TP</span><span class="o">+</span><span class="n">FP</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
 <span class="c1"># HINT: The formula above can be written as (1 + beta**2) * (precision * recall) / ((beta**2 * precision) + recall)</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">precision</span><span class="p">)</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span><span class="p">)</span> <span class="o">/</span> <span class="p">(((</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">precision</span><span class="p">)</span> <span class="o">+</span> <span class="n">recall</span><span class="p">))</span>
 
 <span class="c1"># Print the results </span>
 <span class="k">print</span> <span class="s2">&quot;Naive Predictor: [Accuracy score: {:.4f}, F-score: {:.4f}]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">)</span>
@@ -1588,7 +1588,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 4.0232]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -1660,8 +1660,7 @@ Use of SVMs provides better search accuracy for image classification.</p>
 <blockquote><p><a href="http://www.svms.org/disadvantages.html">http://www.svms.org/disadvantages.html</a></p>
 </blockquote>
 <p><strong>What makes this model a good candidate for the problem, given what you know about the data? </strong></p>
-<p>Bioinformatics data.
-n the field of computational biology, the protein remote homology detection is a common problem. The most effective method to solve this problem is using SVM. In last few years, SVM algorithms have been extensively applied for protein remote homology detection. These algorithms have been widely used for identifying among biological sequences. For example classification of genes, patients on the basis of their genes, and many other biological problems.</p>
+<p>Since svm is nonlinear, it will show its power in complex data sets like this one.</p>
 <h3 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h3><p><strong>Describe one real-world application in industry where the model can be applied.  </strong><br>
 Applicable to the following problem.<br>
 <code>Is there going to be an earthquake on a particular day?</code>
@@ -1675,7 +1674,7 @@ Logistic regression attempts to predict outcomes based on a set of independent v
 <blockquote><p><a href="http://classroom.synonym.com/disadvantages-logistic-regression-8574447.html">http://classroom.synonym.com/disadvantages-logistic-regression-8574447.html</a></p>
 </blockquote>
 <p><strong>What makes this model a good candidate for the problem, given what you know about the data?  </strong></p>
-<p>When there is a large amount of feature such as text classification.</p>
+<p>By using logistic regression in this problem (dataset) where the contribution rate is one of the strengths of logistic regression, you can understand which variable has a big influence. (That leads to action)</p>
 
 </div>
 </div>
@@ -2665,7 +2664,9 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <p>Gradient boosting combines several simple prediction models to create an "ensemble" of models that can make more accurate predictions.
+The prediction model refers to something like a function that performs prediction, and outputs are given when input is given. (The output of the prediction model is prediction.) An ensemble model is like a combination of several people, reinforcing weaknesses.Forecast results are measured by how much data you can expect for testing by splitting the data set for training and testing.
 In our case, the model is trained with existing census data (e.g., age, gender, etc), and uses that data to find rules that separate those with income above or below 50K.
+Learning is based on the deviation from the actual obtained by predicting the test data. Learning a model can be likened to studying again based on the place the student made a mistake.
 During continuous training, new rules (ie decision trees) are learned. This rule is created based on the error obtained from one training.
 Ultimately repeat certain training.
 This is Gradient boosting.</p>
