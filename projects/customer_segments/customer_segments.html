@@ -262,7 +262,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
@@ -276,7 +276,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -291,7 +291,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -418,7 +418,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -530,8 +530,8 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <h3 id="sample0">sample0<a class="anchor-link" href="#sample0">&#182;</a></h3><p>Compared to the average, sample 0 shows that fresh is much smaller, and milk and grocery are larger than the average. Therefore, the possibility of a cafe is considered, because coffee and snacks are usually offered at the cafe.</p>
-<h3 id="sample1">sample1<a class="anchor-link" href="#sample1">&#182;</a></h3><p>For sample 1, Detergents_Paper, grocery, Delicatessen are quite large. Therefore, is not it deli that can eat and drink? In the case of deli with takeout only, we believe that the amount of Detergents_Paper will not increase so far.</p>
-<h3 id="sample2">sample2<a class="anchor-link" href="#sample2">&#182;</a></h3><p>For sample 2, Detergents_Paper and grocery, milk amounts are quite large. I think that it is a Grocery store.
+<h3 id="sample1">sample1<a class="anchor-link" href="#sample1">&#182;</a></h3><p>For sample 1, Detergents_Paper, grocery, Delicatessen are considerably larger than the average value.Therefore, is not it deli that can eat and drink? In the case of deli with takeout only, we believe that the amount of Detergents_Paper will not increase so far.</p>
+<h3 id="sample2">sample2<a class="anchor-link" href="#sample2">&#182;</a></h3><p>For sample 2, Detergents_Paper and grocery, milk are considerably larger than the average value. I think that it is a Grocery store.
 Delicatesses' low amount is one of the judgment criteria.</p>
 
 </div>
@@ -561,7 +561,7 @@ Delicatesses' low amount is one of the judgment criteria.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -591,11 +591,11 @@ Delicatesses' low amount is one of the judgment criteria.</p>
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>-0.31229603895525027</pre>
+<pre>-0.34355200502368027</pre>
 </div>
 
 </div>
@@ -642,7 +642,7 @@ Delicatesses' low amount is one of the judgment criteria.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a scatter matrix for each pair of features in the data</span>
@@ -2422,14 +2422,112 @@ Ny7+WPF7swAAAABJRU5ErkJggg==
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Fresh</th>
+      <td>1.000000</td>
+      <td>0.100510</td>
+      <td>-0.011854</td>
+      <td>0.345881</td>
+      <td>-0.101953</td>
+      <td>0.244690</td>
+    </tr>
+    <tr>
+      <th>Milk</th>
+      <td>0.100510</td>
+      <td>1.000000</td>
+      <td>0.728335</td>
+      <td>0.123994</td>
+      <td>0.661816</td>
+      <td>0.406368</td>
+    </tr>
+    <tr>
+      <th>Grocery</th>
+      <td>-0.011854</td>
+      <td>0.728335</td>
+      <td>1.000000</td>
+      <td>-0.040193</td>
+      <td>0.924641</td>
+      <td>0.205497</td>
+    </tr>
+    <tr>
+      <th>Frozen</th>
+      <td>0.345881</td>
+      <td>0.123994</td>
+      <td>-0.040193</td>
+      <td>1.000000</td>
+      <td>-0.131525</td>
+      <td>0.390947</td>
+    </tr>
+    <tr>
+      <th>Detergents_Paper</th>
+      <td>-0.101953</td>
+      <td>0.661816</td>
+      <td>0.924641</td>
+      <td>-0.131525</td>
+      <td>1.000000</td>
+      <td>0.069291</td>
+    </tr>
+    <tr>
+      <th>Delicatessen</th>
+      <td>0.244690</td>
+      <td>0.406368</td>
+      <td>0.205497</td>
+      <td>0.390947</td>
+      <td>0.069291</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Since Fresh was previously predicted, it can be seen from the row of Fresh that it is normally distributed, which confirms that the previous Fresh is necessary for prediction.
-Also, from the plot, there is a high correlation between Grocery and Detergents-paper. Since either feature may not be necessary, you may need to make a forecast as well as Fresh</p>
+<p>Fresh has no strong correlation with other variables as we investigated earlier.
+On the other hand, the variable milk shows that the correlation with other variables is higher than the other variables.</p>
 
 </div>
 </div>
@@ -7448,7 +7546,11 @@ p4aRiIiIiIgEPTWMREREREQk6KlhJCIiIiIiQU8NIxERERERCXpqGImIiIiISNBTw0hERERERILe
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>Up to the second principal component, 70% dispersion is expressed. Distribution of more than 90% is expressed up to the fourth principal component.</p>
-<p>What is the best among the visualized principal component analyzes is the first principal component. In the first principal component, the weight of any feature quantity exceeds 0.1 and it can be expressed for all feature quantities. Conversely, the other principal components are biased by feature amount. For example, the second principal component is that the weight of detergents_paper is extremely small, the third principal component is also Grocery, Milk is extremely small, and in the fourth principal component the difference between Frozen and Milk with the highest weight is 10 times It is understood that it spreads more than.</p>
+<p>The first principal component is made up of large weights in Detergents_Paper, Grocery &amp; Milk. It is negatively correlated with Fresh and Frozen. This pattern might represent spending in household staples products that are purchased together.</p>
+<p>The second principal component is Fresh, Frozen, Delicatessen with a high weight, and the other is a positive low value. This pattern is a pattern seen in deli etc.</p>
+<p>The third principal component is Fresh and detergent have large negative weight, grocery and deli are large.
+This is a typical pattern of grocery store that does not deal with Fresh.</p>
+<p>In the fourth principal component, milk, grocery weight is small, deli, detergent weight is high. This pattern can be thought of as a deli pattern that can eat and drink inside the shop.</p>
 
 </div>
 </div>
@@ -10121,7 +10223,8 @@ Sample point 2 predicted to be in Cluster 0
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-It is thought that it is a heavy user that has the most influence by reducing the number of deliveries. Therefore, by testing the heavy user layer obtained by the customer segment, you can see the reaction better.</p>
+First, we perform A / B test using customer segments clustered beforehand. For example, if there are three categories, you need to run A / B test three times to identify affected customers.
+That is, it is assumed that categories A, B, and C exist. In that case, if it is five times a week in Category A, we will conduct A / B test three times a week. And, B and C also have the same form.</p>
 
 </div>
 </div>
