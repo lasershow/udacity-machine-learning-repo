@@ -1485,7 +1485,9 @@ yIqIiIiIiGiihKyIiIiIiIgmSsiKiIiIiIhoov8P9gvRI4vh1h0AAAAASUVORK5CYII=
 <p>Agent performs a bad action with a probability of about 40%.
 In addition, agent is not reliable because it is driving at full random.
 Also, this agent always acquired a reward of about -5, which means that it is greatly punished. 
-Since it is totally random, there is no possibility that results will change dramatically.</p>
+Since it is totally random, there is no possibility that results will change dramatically.
+In addition, the accident rate of large / small shows 0.08, 0.17, degree respectively, it is high value, the reliability is low as 10%.
+In conclusion, this agent is not secure and can not be trusted.</p>
 
 </div>
 </div>
@@ -4601,7 +4603,7 @@ I am very satisfied with this.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <p>Let's think about the specific situation {'forward', 'red', None, None} this time.
-In this case the policy should point to None. Also turn right at the next point. (In the United States, you can not turn right at the red light, Japan can not be done.)</p>
+In this case, since waypoint is forward and light is red, basically it is necessary to select the action of None. Also, with the American Traffic Law you can turn right when light is red. Furthermore, since there is no car from the left, in this case it is no problem to take a right turn action. Left turn or straight ahead is a violation, because light is red.</p>
 <table>
 <thead><tr>
 <th style="text-align:left">N</th>
